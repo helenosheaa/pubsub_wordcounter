@@ -14,7 +14,7 @@ ResultView.prototype.bindEvents = function () {
 ResultView.prototype.updateView = function (result) {
   const resultElement = document.querySelector('#result');
   if (result) {
-    resultElement.textContent = `There were ${result} number of words in your input!`
+    resultElement.textContent = `There were ${result} words in your input!`
   }
   else {
     resultElement.textContent = "You have not entered any words!"
