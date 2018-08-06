@@ -5,9 +5,11 @@ const InputView = function() {
 }
 
 InputView.prototype.bindEvents = function () {
-  const input = document.querySelector('#text');
-  input.addEventListener('input', (evt) => {
-    const inputtedText = evt.target.value;
+  const form = document.querySelector('#wordcounter-form');
+  form.addEventListener('submit', (evt) => {
+    evt.preventDefault();
+    const input = document.querySelector('#text');
+    const inputtedText = input.value;
     // console.log('Inputted text:', inputtedText);
     PubSub.publish('InputView:text-inputted', inputtedText);
   })
