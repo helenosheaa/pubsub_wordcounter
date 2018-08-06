@@ -14,12 +14,12 @@ WordCount.prototype.bindEvents = function () {
 
 WordCount.prototype.numberOfWords = function (text) {
   let count = 0;
-  for (let i = 0; i < text.length; i++){
-    if (text[i] === " ")
-      count = +1;
+  textEntered = text.split(" ");
+  for (let i = 0; i < textEntered.length; i++){
+    if (textEntered[i] != "")
+      count += 1;
   }
-  return count += 1;
-
+  return count;
 };
 
 module.exports = WordCount;
